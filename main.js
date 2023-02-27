@@ -30,7 +30,7 @@
 // .toFixed(0) Without decimals
 
 var Ascending, Descending, climbAttemptDescent, climbTotalAscent, climbTotalDescent, climbDistanceAttempAscent,
-    climbDistanceStartAttempAscent, climbRightTriangle, climbSpeedAttempAscent;
+    climbDistanceStartAttempAscent, climbRightTriangle;
 
 function evaluate(input, output) {  
   output.climbAttemptAscent = input.AscentMeters.toFixed(0) - climbTotalAscent;
@@ -39,7 +39,7 @@ function evaluate(input, output) {
     if (climbDistanceStartAttempAscent == 0) {
      // Save the distance when start the Ascent
      climbDistanceStartAttempAscent = input.Distance;
-    } else {//if(climbDistanceAttempAscent > output.climbAttemptAscent) {
+    }else if ((climbDistanceStartAttempAscent > output.climbAttemptAscent) || (climbDistanceAttempAscent > output.climbAttemptAscent)){
      // Save the Speed
      output.climbSpeedAscent = input.Speed
      // Save the Distance in meters when ascensing because later generate the angle of each Attempt
