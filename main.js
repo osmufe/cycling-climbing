@@ -50,9 +50,9 @@ function evaluate(input, output) {
       // Calculate the angle of Cos
       output.climbAngleAscent = Math.acos(climbRightTriangle/climbDistanceAttempAscent)*(180/Math.PI);;
      } else if (climbDistanceAttempAscent == output.climbAttemptAscent){
-      output.climbAngleAscent = 90
+      output.climbAngleAscent = 90;
      } else {
-      output.climbAngleAscent = 0
+      output.climbAngleAscent = 0;
      }
     }
     Ascending = true; 
@@ -61,7 +61,8 @@ function evaluate(input, output) {
     Descending = true;
     Ascending = false;
   }else {
-    climbTotalDescent = input.DescentMeters.toFixed(0);  }
+    climbTotalDescent = input.DescentMeters.toFixed(0);  
+  }
   if ((output.climbAttemptAscent <= climbAttemptDescent) && 
   ((Ascending == false ) && (Descending == true))) {
    // Trigger lap once
