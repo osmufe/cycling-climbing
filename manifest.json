@@ -1,0 +1,54 @@
+{
+  "name": "Indoor Climbing",
+  "version": "1.0",
+  "author": "Oscar Muñoz Ferriz",
+  "description": "Attempts,TimeSpend,Angle",
+  "type": "feature",
+  "usage": "workout",
+  "modificationTime": 1674690409, 
+  "in": [
+    {
+      "name": "AscentMeters",
+      "source": "/Fusion/Altitude/Ascent",
+      "type": "subscribe"
+    },
+    {
+      "name": "DescentMeters",
+      "source": "/Fusion/Altitude/Descent",
+      "type": "subscribe"
+    },
+    {
+      "name": "Distance",
+      "source": "/Activity/Current/Distance",
+      "type": "subscribe"
+    },
+    {
+      "name": "Speed",
+      "source": "/Activity/Current/Speed",
+      "type": "subscribe"
+    }
+  ],
+  "out": [
+    {
+      "name": "climbAttempts"
+    },
+    {
+      "name": "climbAttemptAscent"
+    },
+    {
+      "name": "climbAngleAscent",
+      "log": true,
+      "shownName": "Angle of Ascent",
+      "format": "Count_Threedigits"
+    },
+    {
+      "name": "climbSpeedAscent",
+      "log": true,
+      "shownName": "Speed Ascent",
+      "format": "Speed_Approximate"     
+    }
+  ],
+  "template": [
+    { "name": "t.html" }
+  ]
+}
