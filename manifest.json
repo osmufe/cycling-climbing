@@ -1,11 +1,11 @@
 {
-  "name": "Indoor Climbing",
+  "name": "Cycling Climbing",
   "version": "1.0",
   "author": "Oscar Muñoz Ferriz",
-  "description": "Attempts,TimeSpend,Angle",
+  "description": "Attempts,Spend,Angle",
   "type": "feature",
   "usage": "workout",
-  "modificationTime": 1674690409, 
+  "modificationTime": 1677531622, 
   "in": [
     {
       "name": "AscentMeters",
@@ -45,7 +45,7 @@
       "name": "climbSpeedAscent",
       "log": true,
       "shownName": "Speed Ascent",
-      "format": "Speed_Approximate"     
+      "format": "Speed_Threedigits"     
     }
   ],
   "template": [
